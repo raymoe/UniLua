@@ -209,7 +209,8 @@ namespace UniLua
 				D_Throw( ThreadStatus.LUA_ERRSYNTAX );
 			}
 		}
-
+		
+		//对应f_parser 
 		private static void F_Load(ref LoadParameter param)
 		{
 			var L = param.L;
@@ -224,6 +225,7 @@ namespace UniLua
 			else
 			{
 				L.CheckMode( param.Mode, "text" );
+				//对应luaY_parser
 				proto = Parser.Parse(L, param.LoadInfo, param.Name);
 			}
 

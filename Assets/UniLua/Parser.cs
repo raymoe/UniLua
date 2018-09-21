@@ -184,6 +184,7 @@ namespace UniLua
 
 	public class Parser
 	{
+		//相当于luaY_parser
 		public static LuaProto Parse(
 			ILuaState lua, ILoadInfo loadinfo, string name )
 		{
